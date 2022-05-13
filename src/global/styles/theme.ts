@@ -3,6 +3,7 @@ export default {
         background: '#E5E5E5',
         Text: '#000000',
         secondaryText: '#7E7E7E',
+        defaultColorText: '#FFFFFF'
     },
 
     fonts: {

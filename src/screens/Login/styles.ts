@@ -20,7 +20,6 @@ export const Text = styled.Text`
    
    margin-top: ${RFValue(100)}px;
    margin-right: ${RFValue(137)}px;
-   margin-bottom: ${RFValue(10)}px;
 `;
 
 export const SubText = styled.Text`
@@ -28,6 +27,8 @@ export const SubText = styled.Text`
     color: ${({ theme }) => theme.colors.secondaryText};
 
     font-size: ${RFValue(16)}px;
+    margin-top: ${RFValue(10)}px;
+    margin-right: ${RFValue(40)}px;
 `;
 
 export const Footer = styled.Text`

@@ -1,8 +1,8 @@
 import React from 'react';
+import { TextInputProps } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 
-import { TextInputProps } from 'react-native'
 
 import { Container } from './styles'
 
