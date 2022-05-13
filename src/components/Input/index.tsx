@@ -1,4 +1,7 @@
 import React from 'react';
+import { MaterialIcons } from '@expo/vector-icons'
+
+
 import { TextInputProps } from 'react-native'
 
 import { Container } from './styles'

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { Container, Text, SubText, Image } from './styles';
+import { Container, Text, SubText, Image, Footer } from './styles';
 
 import { Input } from '../../components/Input'
 
@@ -13,6 +12,7 @@ export function Login() {
             <Input 
                 placeholder='@username'
             />
+            <Footer>Termos de política e privacidade</Footer>
         </Container>
     );
 };
