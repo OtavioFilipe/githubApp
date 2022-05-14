@@ -2,13 +2,14 @@ import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.TouchableOpacity`
-    flex: 1;
-    background-color: black;
+    width: ${RFValue(295)}px;
+    height: ${RFValue(40)}px;
     margin-top: ${RFValue(25)}px;
-    width: ${RFValue(290)}px;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
+    
+    background-color: ${({  theme }) => theme.colors.Text};
 `;
 
 export const Title = styled.Text`
