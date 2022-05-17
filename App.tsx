@@ -10,21 +10,23 @@ import {
   Mulish_700Bold,
 } from "@expo-google-fonts/mulish";
 
-import { Login } from "./src/screens/Login";
+import Login from "./src/screens/Login";
+
+import Users from "./src/screens/Users";
 
 export default function App() {
-  const [fonstLoaded] = useFonts({
+  const [fontLoaded] = useFonts({
     Mulish_400Regular,
     Mulish_700Bold,
   });
 
-  if (!fonstLoaded) {
+  if (!fontLoaded) {
     return <AppLoading />;
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <Login />
+      <Users />
     </ThemeProvider>
   );
 }

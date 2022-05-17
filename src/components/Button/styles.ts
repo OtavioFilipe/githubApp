@@ -9,7 +9,7 @@ export const Container = styled.TouchableOpacity`
     align-items: center;
     border-radius: 100px;
     
-    background-color: ${({  theme }) => theme.colors.Text};
+    background-color: ${({ theme }) => theme.colors.Text};
 `;
 
 export const Title = styled.Text`

@@ -4,13 +4,14 @@ import {
     Text, 
     SubText, 
     Image, 
-    Footer
+    Footer,
+    UnderlineText
 } from './styles';
 
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button';
 
-export function Login() {
+export default function Login() {
     return (
         <Container>
             <Image source={require('../../assets/icons/github.png')}/>
@@ -22,7 +23,7 @@ export function Login() {
             <Button 
                 title='Cadastrar'
             />
-            <Footer>Termos de política e privacidade</Footer>
+            <Footer>Termos de <UnderlineText>política</UnderlineText> e <UnderlineText>privacidade</UnderlineText></Footer>
         </Container>
     );
 };
