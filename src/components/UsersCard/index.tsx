@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, GitName, SubGitName, Location, Image, Field, SubText } from './styles';
 
 interface GitUserCard {
+    id: string;
     name: string;
     user: string;
     city: string;

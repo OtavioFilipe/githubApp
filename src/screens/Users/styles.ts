@@ -20,11 +20,11 @@ export const Header = styled.View`
 `;
 
 
-export const Field = styled.ScrollView.attrs({
+/* export const Field = styled.ScrollView.attrs({
     showsVerticalScrollIndicator: false,
 })`
     padding: 8px 16px;
-`;
+`; */
 
 export const Image = styled.Image`
     width: ${RFValue(99)}px;
