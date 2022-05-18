@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList } from "react-native";
+
 import { CustomFlatlist } from "../../components/CustomFlatlist";
 import { UserButton } from "../../components/UserButton";
 import { GitUserCard, UsersCard } from "../../components/UsersCard";
