@@ -13,8 +13,8 @@ import {
 } from "@expo-google-fonts/mulish";
 
 import Login from "./src/screens/Login";
-
 import Users from "./src/screens/Users";
+import AddUser from "./src/screens/AddUser";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +34,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="User" component={Users} />
+        <Stack.Screen name="AddUser" component={AddUser} />
       </Stack.Navigator>
     </NavigationContainer>
     </ThemeProvider>

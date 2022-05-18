@@ -56,7 +56,7 @@ export default function Users({ navigation }) {
         <Image source={require("../../assets/icons/github.png")} />
         <UserButton 
         title="Adicionar novo"
-        onPress={() => navigation.navigate('Login',{user: data || []})}
+        onPress={() => navigation.navigate('AddUser',{user: data || []})}
         />
       </Header>
       <CustomFlatlist

@@ -1,5 +1,4 @@
 import React from 'react';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { 
     Container, 
     Text, 
@@ -11,16 +10,12 @@ import {
 
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button';
-import { TouchableOpacity } from 'react-native';
 
-export default function Login({ route ,navigation }) {
-    const user = route.params;
+export default function Login({ navigation }) {
 
     return (
         <Container>
-            {user ? (<TouchableOpacity onPress={() => navigation.navigate('User')}>
-                <MaterialIcons name="arrow-back" size={32} style={{marginRight: 260}} />
-                </TouchableOpacity>) : null}
+            
             <Image source={require('../../assets/icons/github.png')}/>
             <Text>Buscar usuário</Text>
             <SubText>Crie sua conta através do seu usuário do GitHub</SubText>
