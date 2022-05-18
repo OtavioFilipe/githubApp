@@ -19,7 +19,7 @@ export default function Login({ route ,navigation }) {
     return (
         <Container>
             {user ? (<TouchableOpacity onPress={() => navigation.navigate('User')}>
-                <MaterialIcons name="arrow-back"/>
+                <MaterialIcons name="arrow-back" size={32} style={{marginRight: 260}} />
                 </TouchableOpacity>) : null}
             <Image source={require('../../assets/icons/github.png')}/>
             <Text>Buscar usuário</Text>
