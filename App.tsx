@@ -1,4 +1,6 @@
 import React from "react";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AppLoading from "expo-app-loading";
 import { ThemeProvider } from "styled-components";
 
@@ -14,6 +16,8 @@ import Login from "./src/screens/Login";
 
 import Users from "./src/screens/Users";
 
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   const [fontLoaded] = useFonts({
     Mulish_400Regular,
@@ -26,7 +30,12 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Users />
+      <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="User" component={Users} />
+      </Stack.Navigator>
+    </NavigationContainer>
     </ThemeProvider>
   );
 }

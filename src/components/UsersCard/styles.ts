@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
     width: ${RFValue(345)}px;
     height: ${RFValue(160)}px;
     margin-bottom: ${RFValue(8)}px;
@@ -9,39 +9,58 @@ export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.defaultColorText};
 `;
 
-export const Field = styled.View`
-    margin-top: ${RFValue(32)}px;
-    margin-left: ${RFValue(24)}px;
-    width: ${RFValue(240)}px;
-    height: ${RFValue(64)}px;
-    flex-direction: row;
-`;
-
-export const SubText = styled.View``;
-
 export const GitName = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
     font-size: ${RFValue(16)}px;
-    margin-left: ${RFValue(16)}px;
-    margin-top: ${RFValue(9)}px;
 `;
 
 export const SubGitName = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(14)}px;
+    margin-top: ${RFValue(10)}px;
 `;
 
 export const Location = styled.Text`
-    width: ${RFValue(262)}px;
     height: ${RFValue(16)}px;
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(12)}px;
     color: ${({ theme }) => theme.colors.secondaryText};
-    margin-left: ${RFValue(24)}px;
-    margin-top: ${RFValue(16)}px;
+    margin-right: 10px;
+    justify-content: center;
 `;
 
 export const Image = styled.Image`
     height: ${RFValue(64)}px;
     width: ${RFValue(64)}px;
+    margin-right: 16px;
+`;
+
+export const FooterCard = styled.View`
+    width: 100%;
+    flex-direction: row;
+    padding: 0px 24px;
+    margin-top: 16px;
+    justify-content: flex-start;
+`;
+
+export const TopCard = styled.View`
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    padding: 0px 24px;
+    align-items: center;
+    justify-content: flex-start;
+`;
+
+export const UserInformation = styled.View`
+`;
+
+export const Trash = styled.TouchableOpacity`
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    background-color: #7E7E7E;
+    align-items: center;
+    justify-content: center;
+    margin-left: 39px;
 `;

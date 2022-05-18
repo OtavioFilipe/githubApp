@@ -28,6 +28,7 @@ export const SubText = styled.Text`
     margin-top: ${RFValue(10)}px;
 
     color: ${({ theme }) => theme.colors.secondaryText};
+    margin-bottom: 32px;
 `;
 
 export const Footer = styled.Text`

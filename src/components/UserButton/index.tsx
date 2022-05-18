@@ -5,11 +5,12 @@ import { Container, Title } from './styles';
 
 interface Props extends TextInputProps {
     title: string;
+    onPress: () => void;
 }
 
-export function UserButton({ title } : Props) {
+export function UserButton({ title, onPress } : Props) {
     return (
-        <Container>
+        <Container onPress={onPress}>
             <Title>
                 {title}
             </Title>

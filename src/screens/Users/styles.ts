@@ -16,15 +16,8 @@ export const Header = styled.View`
     padding: ${RFValue(16)}px;
     margin-top: ${getStatusBarHeight()};
     flex-direction: row;
-    background-color: ${({ theme }) => theme.colors.defaultColorText}
+    background-color: ${({ theme }) => theme.colors.defaultColorText};
 `;
-
-
-/* export const Field = styled.ScrollView.attrs({
-    showsVerticalScrollIndicator: false,
-})`
-    padding: 8px 16px;
-`; */
 
 export const Image = styled.Image`
     width: ${RFValue(99)}px;

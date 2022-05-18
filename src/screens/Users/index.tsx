@@ -1,83 +1,78 @@
-import React from 'react';
-import { FlatList } from 'react-native';
-import { UserButton } from '../../components/UserButton';
-import { UsersCard } from '../../components/UsersCard';
+import React from "react";
+import { FlatList } from "react-native";
+import { CustomFlatlist } from "../../components/CustomFlatlist";
+import { UserButton } from "../../components/UserButton";
+import { GitUserCard, UsersCard } from "../../components/UsersCard";
 
-import { Container, Header, Image } from './styles';
+import { Container, Header, Image } from "./styles";
 
-interface DataListProps {
-    id: string;
-    name: string;
-    user: string;
-    company: string;
-    city: string;
-  }
+export default function Users({ navigation }) {
+  const data: GitUserCard[] = [
+    {
+      id: "1",
+      name: "John Doe Santos",
+      user: "@johndoesantos",
+      company: "GO.K Digital",
+      city: "São Paulo, Brazil",
+      stars: 2
+    },
+    {
+      id: "2",
+      name: "John Doe Santos",
+      user: "@johndoesantos",
+      company: "GO.K Digital",
+      city: "São Paulo, Brazil",
+      stars: 2
+    },
+    {
+      id: "3",
+      name: "John Doe Santos",
+      user: "@johndoesantos",
+      company: "GO.K Digital",
+      city: "São Paulo, Brazil",
+      stars: 2
+    },
+    {
+      id: "4",
+      name: "John Doe Santos",
+      user: "@johndoesantos",
+      company: "GO.K Digital",
+      city: "São Paulo, Brazil",
+      stars: 2
+    },
+    {
+      id: "5",
+      name: "John Doe Santos",
+      user: "@johndoesantos",
+      company: "GO.K Digital",
+      city: "São Paulo, Brazil",
+      stars: 2
+    },
+  ];
 
-export default function Users() {
-    const data: DataListProps[] = [
-        {
-            id: '1',
-            name: 'John Doe Santos',
-            user: '@johndoesantos',
-            company: 'GO.K Digital',
-            city: 'São Paulo, Brazil'
-        },
-        {
-            id: '2',
-            name: 'John Doe Santos',
-            user: '@johndoesantos',
-            company: 'GO.K Digital',
-            city: 'São Paulo, Brazil'
-        },
-        {
-            id: '3',
-            name: 'John Doe Santos',
-            user: '@johndoesantos',
-            company: 'GO.K Digital',
-            city: 'São Paulo, Brazil'
-        },
-        {
-            id: '4',
-            name: 'John Doe Santos',
-            user: '@johndoesantos',
-            company: 'GO.K Digital',
-            city: 'São Paulo, Brazil'
-        },
-        {
-            id: '5',
-            name: 'John Doe Santos',
-            user: '@johndoesantos',
-            company: 'GO.K Digital',
-            city: 'São Paulo, Brazil'
-        }
-    ];
-    
-    return (
-        <Container>
-            <Header>
-                <Image source={require('../../assets/icons/github.png')}/>
-                <UserButton title='Adicionar novo'/>
-            </Header>
-            {/* <Field >
-                <UsersCard
-                    name='John Doe Santos'
-                    user='@johndoesantos'
-                    company='GO.K Digital'
-                    city='São Paulo, Brazil'
-                />
-            </Field> */}
-            <FlatList
-                keyExtractor={(item) => item.id}
-                data={data}
-                renderItem={({ item }) => 
-                <UsersCard
-                id={item.id}    
-                name={item.name}
-                user={item.user}
-                company={item.company}
-                city={item.city}
-                />}
-            />
-        </Container>
-    );
+  return (
+    <Container>
+      <Header>
+        <Image source={require("../../assets/icons/github.png")} />
+        <UserButton 
+        title="Adicionar novo"
+        onPress={() => navigation.navigate('Login',{user: data || []})}
+        />
+      </Header>
+      <CustomFlatlist
+        keyExtractor={(item) => item.id}
+        data={data}
+        renderItem={({ item }) => (
+          <UsersCard
+            id={item.id}
+            name={item.name}
+            user={item.user}
+            company={item.company}
+            city={item.city}
+            stars={item.stars}
+          />
+        )}
+      />
+    </Container>
+  );
 };
