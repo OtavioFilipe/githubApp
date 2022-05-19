@@ -64,6 +64,7 @@ export default function Users({ navigation }) {
         data={data}
         renderItem={({ item }) => (
           <UsersCard
+          onPress={() => navigation.navigate('Repositories')}
             id={item.id}
             name={item.name}
             user={item.user}

@@ -15,6 +15,7 @@ import {
 import Login from "./src/screens/Login";
 import Users from "./src/screens/Users";
 import AddUser from "./src/screens/AddUser";
+import Repositories from "./src/screens/Repositories";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,7 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="User" component={Users} />
         <Stack.Screen name="AddUser" component={AddUser} />
+        <Stack.Screen name="Repositories" component={Repositories} />
       </Stack.Navigator>
     </NavigationContainer>
     </ThemeProvider>

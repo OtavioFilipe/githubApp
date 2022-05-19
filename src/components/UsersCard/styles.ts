@@ -59,7 +59,7 @@ export const Trash = styled.TouchableOpacity`
     width: 24px;
     height: 24px;
     border-radius: 100px;
-    background-color: #7E7E7E;
+    background-color: #E8E8E8;
     align-items: center;
     justify-content: center;
     margin-left: 39px;

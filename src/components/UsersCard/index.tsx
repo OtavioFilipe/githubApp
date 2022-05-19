@@ -41,7 +41,7 @@ export function UsersCard({ name, user, city, company, stars, onPress }: GitUser
             </SubGitName>
         </UserInformation>
         <Trash>
-            <MaterialIcons name='delete' size={16} color='black' />
+            <MaterialIcons name='delete' size={20} color='black' />
         </Trash>
       </TopCard>
       <FooterCard>
