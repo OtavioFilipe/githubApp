@@ -22,3 +22,5 @@ export const Image = styled.Image`
     width: ${RFValue(32)}px;
     height: ${RFValue(32)}px;
 `;
+
+export const Title = styled.Text``;
