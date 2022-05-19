@@ -23,16 +23,20 @@ export const Text = styled.Text`
 
 export const SubText = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: ${RFValue(16)}px;
+    font-size: ${RFValue(15)}px;
     margin-top: ${RFValue(10)}px;
 
     color: ${({ theme }) => theme.colors.secondaryText};
     margin-bottom: 32px;
 `;
 
+export const Field = styled.View`
+    justify-content: center;
+    align-items: center;
+`;
+
 export const Footer = styled.Text`
     margin-top: ${RFValue(160)}px;
-    align-items: center;
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(16)}px;
     
@@ -44,4 +48,3 @@ export const UnderlineText = styled.Text`
     font-size: ${RFValue(16)}px;
     text-decoration: underline;
 `;
-

@@ -9,7 +9,8 @@ import {
     Text, 
     SubText, 
     Footer, 
-    UnderlineText 
+    UnderlineText,
+    Field
 } from "./styles";
 
 import { Input } from "../../components/Input";
@@ -33,7 +34,9 @@ export default function AddUser({ route, navigation }) {
             <Button onPress={() => navigation.navigate('User')}
                 title='Adicionar'
             />
-            <Footer>Termos de <UnderlineText>política</UnderlineText> e <UnderlineText>privacidade</UnderlineText></Footer>
+            <Field>
+                <Footer>Termos de <UnderlineText>política</UnderlineText> e <UnderlineText>privacidade</UnderlineText></Footer>
+            </Field>
         </Container>
     );
 };
