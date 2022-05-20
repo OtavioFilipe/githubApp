@@ -17,11 +17,11 @@ export const Text = styled.Text`
 
 export const Description = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: ${RFValue(14)}px;
+    font-size: ${RFValue(13)}px;
     margin-top: ${RFValue(10)}px;
 `;
 
-export const Location = styled.Text`
+export const Icon = styled.Text`
     height: ${RFValue(16)}px;
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(12)}px;
@@ -57,10 +57,25 @@ export const UserInformation = styled.View`
 `;
 
 export const Star = styled.TouchableOpacity`
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border-radius: 100px;
-    background-color: '#F9EAC3';
+    background-color: '#FFF6D6';
     align-items: center;
     justify-content: center;
+    margin-left: 98px;
+`;
+export const Field =styled.View`
+    flex-direction: row;
+    margin-left: 19px;
+`;
+
+export const EditIcon = styled.TouchableOpacity`
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 11px;
+    background-color: #0017FF;
 `;
