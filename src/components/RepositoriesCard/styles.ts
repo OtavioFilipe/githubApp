@@ -4,8 +4,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 export const Container = styled.TouchableOpacity`
     width: ${RFValue(345)}px;
     height: ${RFValue(185)}px;
-    margin-top: ${RFValue(10)}px;
-    margin-left: ${RFValue(16)}px;
+    margin-top: ${RFValue(8)}px;
     border-radius: 8px;
     background-color: ${({ theme }) => theme.colors.defaultColorText};
 `;
@@ -41,7 +40,7 @@ export const FooterCard = styled.View`
     flex-direction: row;
     padding: 0px 24px;
     margin-top: 16px;
-    justify-content: flex-start;
+    justify-content: space-between;
 `;
 
 export const TopCard = styled.View`

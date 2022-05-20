@@ -17,7 +17,7 @@ import {
   EditIcon
 } from "./styles";
 
-export interface GitUserCard {
+export interface RepositoriesCard {
   id: string;
   projectName: string;
   description: string;
@@ -34,7 +34,7 @@ export function RepositoriesCard({
   days,
   language,
   access,
-}: GitUserCard) {
+}: RepositoriesCard) {
   return (
     <Container>
       <TopCard>
@@ -57,7 +57,7 @@ export function RepositoriesCard({
           title="#Front End"
         />
         <EditIcon>
-          <MaterialIcons name="edit" size={12} color="FFFFFF"/>
+          <MaterialIcons name="edit" size={12} color="white"/>
         </EditIcon>
       </Field>
       <FooterCard>

@@ -32,7 +32,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-      <Stack.Navigator initialRouteName="Repositories" screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="User" component={Users} />
         <Stack.Screen name="AddUser" component={AddUser} />

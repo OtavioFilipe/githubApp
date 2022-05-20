@@ -4,7 +4,7 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 
 export const Container = styled.View`
-    
+    flex: 1;
 `;
 
 export const Header = styled.View`
@@ -22,5 +22,3 @@ export const Image = styled.Image`
     width: ${RFValue(32)}px;
     height: ${RFValue(32)}px;
 `;
-
-export const Title = styled.Text``;
