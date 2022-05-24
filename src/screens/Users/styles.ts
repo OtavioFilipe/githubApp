@@ -14,7 +14,7 @@ export const Header = styled.View`
 
     justify-content: space-between;
     padding: ${RFValue(16)}px;
-    margin-top: ${getStatusBarHeight()};
+    margin-top: ${getStatusBarHeight() + RFValue(10)}px;
     flex-direction: row;
     background-color: ${({ theme }) => theme.colors.defaultColorText};
 `;

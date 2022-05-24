@@ -11,11 +11,10 @@ import {
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button';
 
-export default function Login({ navigation }) {
+export default function Login({ navigation }: any) {
 
     return (
         <Container>
-            
             <Image source={require('../../assets/icons/github.png')}/>
             <Text>Buscar usuário</Text>
             <SubText>Crie sua conta através do seu usuário do GitHub</SubText>

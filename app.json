@@ -5,6 +5,21 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
+    ],
+    "plugins": [
+      "sentry-expo"
+    ]
+  },
+  "hooks": {
+    "postPublish": [
+      {
+        "file": "sentry-expo/upload-sourcemaps",
+        "config": {
+          "organization": "CodeComunity",
+          "project": "react-native",
+          "authToken": "ca165d5b690a41aeacabc83b71c3bf80ae3095717b1f490bbbe3b9495131bbcb"
+        }
+      }
     ]
   }
 }
