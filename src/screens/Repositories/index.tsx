@@ -7,7 +7,7 @@ import { SearchBox } from "../../components/SearchBox";
 import { RepositoriesCard } from "../../components/RepositoriesCard";
 import { CustomFlatlist } from "../../components/CustomFlatlist";
 
-export default function Repositories({ navigation }) {
+export default function Repositories({ navigation } : any) {
   const data: RepositoriesCard[] = [
     {
       id: "1",
