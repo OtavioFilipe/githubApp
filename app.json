@@ -1,13 +1,17 @@
 {
   "expo": {
-    "name": "githubApp",
-    "slug": "githubApp",
+    "name": "githubapp",
+    "slug": "githubapp",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "googleServicesFile": "./google-services.json"
+    },
     "plugins": [
-      "sentry-expo"
+      "sentry-expo",
+      "@react-native-firebase/crashlytics"
     ]
   },
   "hooks": {
