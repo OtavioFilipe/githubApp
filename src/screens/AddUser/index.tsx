@@ -13,6 +13,8 @@ import {
     Field
 } from "./styles";
 
+import image from "../../assets/icons/github.png";
+
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
@@ -25,7 +27,7 @@ export default function AddUser({ route, navigation }) {
                 <MaterialIcons name="arrow-back" size={32} style={{ marginRight: 260 }} />
             </TouchableOpacity>) : null}
 
-            <Image source={require('../../assets/icons/github.png')} />
+            <Image source={image} />
             <Text>Buscar usuário</Text>
             <SubText>Adicione seus novos usuários do GitHub</SubText>
             <Input

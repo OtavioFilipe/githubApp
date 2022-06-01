@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-import { CardButton } from "../CardButton";
+import CardButton from "../CardButton";
 
 import {
   Container,
@@ -14,7 +14,7 @@ import {
   UserInformation,
   Star,
   Field,
-  EditIcon
+  EditIcon,
 } from "./styles";
 
 export interface RepositoriesCard {
@@ -50,14 +50,10 @@ export default function RepositoriesCard({
         </UserInformation>
       </TopCard>
       <Field>
-      <CardButton
-          title="#JavaScript"
-        />
-        <CardButton
-          title="#Front End"
-        />
+        <CardButton title="#JavaScript" />
+        <CardButton title="#Front End" />
         <EditIcon>
-          <MaterialIcons name="edit" size={12} color="white"/>
+          <MaterialIcons name="edit" size={12} color="white" />
         </EditIcon>
       </Field>
       <FooterCard>

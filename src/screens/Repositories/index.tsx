@@ -7,6 +7,8 @@ import SearchBox from "../../components/SearchBox";
 import RepositoriesCard from "../../components/RepositoriesCard";
 import CustomFlatlist from "../../components/CustomFlatlist";
 
+import avatarImage from "../../assets/icons/userAvatar.png"
+
 export default function Repositories({ navigation } : any) {
   const data: RepositoriesCard[] = [
     {
@@ -56,7 +58,7 @@ export default function Repositories({ navigation } : any) {
           style={{ marginRight: 260 }}
           onPress={() => navigation.navigate("User")}
         />
-        <Image source={require("../../assets/icons/userAvatar.png")} />
+        <Image source={avatarImage} />
       </Header>
       <SearchBox placeholder="Buscar um repositório..." />
       <CustomFlatlist

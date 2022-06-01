@@ -17,18 +17,19 @@ import { View } from "react-native";
 export interface GitUserCard {
   id: string;
   name: string;
-  user: string;
-  city: string;
+  login: string;
+  location: string;
   company: string;
-  stars: number;
+  // stars: number;
+  // avatar_url: string;
   onPress?: () => void;
 }
 
-export function UsersCard({ name, user, city, company, stars, onPress }: GitUserCard) {
+export function UsersCard({ name, login, location, company, onPress}: GitUserCard) {
   return (
     <Container onPress={onPress}>
       <TopCard>
-        <Image source={require('../../assets/icons/userAvatar.png')}/>
+        {/* <Image source={{uri: avatar_url}}/> */}
         <UserInformation >
             <View style={{flexDirection: 'row'}}>
             <GitName>
@@ -37,7 +38,7 @@ export function UsersCard({ name, user, city, company, stars, onPress }: GitUser
             <MaterialIcons name='keyboard-arrow-right' size={24} />
             </View>
             <SubGitName>
-                {user}
+                {login}
             </SubGitName>
         </UserInformation>
         <Trash>
@@ -51,11 +52,12 @@ export function UsersCard({ name, user, city, company, stars, onPress }: GitUser
         </Location>
             <MaterialIcons name='place' size={16} style={{marginRight: 4}} color='#7E7E7E'/>
         <Location>
-            {city}
+            {location}
         </Location>
             <MaterialIcons name='star' size={16} style={{marginRight: 4}} color='#7E7E7E'/>
         <Location>
-            {stars}
+            {/* {stars} */}
+            2
         </Location>
       </FooterCard>
     </Container>
