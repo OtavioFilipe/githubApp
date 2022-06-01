@@ -6,7 +6,7 @@ import { Container, Field, IconContainer } from './styles'
 
 type Props = TextInputProps;
 
-export function Input({...rest} : Props) {
+export default function Input({...rest} : Props) {
     return (
         <Container>
             <IconContainer style={{width: '10%'}}>

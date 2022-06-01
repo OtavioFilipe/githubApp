@@ -13,6 +13,8 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.config.ReactFeatureFlags;
 import com.facebook.soloader.SoLoader;
 import com.githubapp.newarchitecture.MainApplicationReactNativeHost;
+import io.invertase.firebase.crashlytics.ReactNativeFirebaseCrashlyticsPackage;
+
 
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;

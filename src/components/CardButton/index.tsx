@@ -6,7 +6,7 @@ interface Props {
     title: string;
 }
 
-export function CardButton({ title } : Props) {
+export default function CardButton({ title } : Props) {
     return (
         <Container>
             <Title>

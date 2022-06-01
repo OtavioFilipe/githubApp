@@ -6,7 +6,7 @@ import { Container, Field, IconContainer, FilterIcon } from './styles';
 
 type Props = TextInputProps;
 
-export function SearchBox({...rest} : Props) {
+export default function SearchBox({...rest} : Props) {
     return (
         <Container>
             <IconContainer style={{width: '10%'}}>

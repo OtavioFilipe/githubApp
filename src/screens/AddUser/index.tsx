@@ -13,8 +13,8 @@ import {
     Field
 } from "./styles";
 
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
 
 export default function AddUser({ route, navigation }) {
     const user = route.params;

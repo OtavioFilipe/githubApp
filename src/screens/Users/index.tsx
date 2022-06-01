@@ -1,7 +1,7 @@
 import React from "react";
 
-import { CustomFlatlist } from "../../components/CustomFlatlist";
-import { UserButton } from "../../components/UserButton";
+import CustomFlatlist from "../../components/CustomFlatlist";
+import UserButton from "../../components/UserButton";
 import { GitUserCard, UsersCard } from "../../components/UsersCard";
 
 import { Container, Header, Image } from "./styles";

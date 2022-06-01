@@ -3,9 +3,9 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 import { Container, Header, Image } from "./styles";
 
-import { SearchBox } from "../../components/SearchBox";
-import { RepositoriesCard } from "../../components/RepositoriesCard";
-import { CustomFlatlist } from "../../components/CustomFlatlist";
+import SearchBox from "../../components/SearchBox";
+import RepositoriesCard from "../../components/RepositoriesCard";
+import CustomFlatlist from "../../components/CustomFlatlist";
 
 export default function Repositories({ navigation } : any) {
   const data: RepositoriesCard[] = [

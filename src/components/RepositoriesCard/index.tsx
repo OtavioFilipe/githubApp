@@ -27,7 +27,7 @@ export interface RepositoriesCard {
   days: string;
 }
 
-export function RepositoriesCard({
+export default function RepositoriesCard({
   projectName,
   description,
   stars,

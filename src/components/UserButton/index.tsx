@@ -8,7 +8,7 @@ interface Props extends TextInputProps {
     onPress: () => void;
 }
 
-export function UserButton({ title, onPress } : Props) {
+export default function UserButton({ title, onPress } : Props) {
     return (
         <Container onPress={onPress}>
             <Title>

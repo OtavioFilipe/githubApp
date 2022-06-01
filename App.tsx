@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ThemeProvider } from "styled-components";
-import Crashlytics  from "@react-native-firebase/crashlytics"
 import AppLoading from "expo-app-loading";
 
 import { init } from "sentry-expo";
@@ -44,8 +43,6 @@ function App() {
     SentryError();
   }, []);
 
-  console.log(Crashlytics);
-  
 
   return (
     <ThemeProvider theme={theme}>

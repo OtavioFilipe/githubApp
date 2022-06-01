@@ -7,7 +7,7 @@ interface Props extends FlatListProps<any> {
     
 }
 
-export function CustomFlatlist({...rest}: Props) {
+export default function CustomFlatlist({...rest}: Props) {
     return (
         <Container 
         contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}
