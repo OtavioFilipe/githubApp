@@ -9,7 +9,7 @@ import { Container, Header, Image } from "./styles";
 import image from "../../assets/icons/github.png"
 import { Text } from "react-native";
 
-export default function Users({ route, navigation }) {
+export default function Users({ route, navigation }: any) {
   
   const {data} = route.params;
 
@@ -26,12 +26,9 @@ export default function Users({ route, navigation }) {
         onPress={() => navigation.navigate('AddUser',{user: data || []})}
         />
       </Header>
-     <Text style={{flex: 1}}>
-       {parseJson.name}
-       </Text> 
       <CustomFlatlist
         keyExtractor={(item) => item.id}
-        data={parseJson}
+        data={[parseJson]}
         renderItem={({ item }) => (
           <UsersCard
           onPress={() => navigation.navigate('Repositories')}
@@ -40,7 +37,8 @@ export default function Users({ route, navigation }) {
             login={item.login}
             company={item.company}
             location={item.location}
-            // stars={item.stars}
+            starredRepositories={item.starredRepositories}
+            avatar_url={item.avatar_url}
           />
         )}
       />

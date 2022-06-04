@@ -33,6 +33,7 @@ export const Image = styled.Image`
     height: ${RFValue(64)}px;
     width: ${RFValue(64)}px;
     margin-right: 16px;
+    border-radius: 100px;
 `;
 
 export const FooterCard = styled.View`

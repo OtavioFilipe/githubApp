@@ -20,16 +20,18 @@ export interface GitUserCard {
   login: string;
   location: string;
   company: string;
-  // stars: number;
-  // avatar_url: string;
+  starredRepositories?: {
+    totalCount?: number;
+  };
+  avatar_url: string;
   onPress?: () => void;
 }
 
-export function UsersCard({ name, login, location, company, onPress}: GitUserCard) {
+export function UsersCard({ name, login, location, company, starredRepositories, onPress, avatar_url}: GitUserCard) {
   return (
     <Container onPress={onPress}>
       <TopCard>
-        {/* <Image source={{uri: avatar_url}}/> */}
+        <Image source={{uri: avatar_url}}/>
         <UserInformation >
             <View style={{flexDirection: 'row'}}>
             <GitName>
@@ -56,8 +58,7 @@ export function UsersCard({ name, login, location, company, onPress}: GitUserCar
         </Location>
             <MaterialIcons name='star' size={16} style={{marginRight: 4}} color='#7E7E7E'/>
         <Location>
-            {/* {stars} */}
-            2
+            {starredRepositories?.totalCount || 0 }
         </Location>
       </FooterCard>
     </Container>
