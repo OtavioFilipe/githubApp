@@ -1,6 +1,5 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 
 export const Container = styled.View`
@@ -13,7 +12,6 @@ export const Header = styled.View`
 
     justify-content: space-between;
     padding: ${RFValue(16)}px;
-    margin-top: ${getStatusBarHeight()};
     flex-direction: row;
     background-color: ${({ theme }) => theme.colors.defaultColorText};
 `;

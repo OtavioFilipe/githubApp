@@ -17,30 +17,33 @@ import {
   EditIcon,
 } from "./styles";
 
-export interface RepositoriesCard {
+export interface RepositoriesCardProps {
   id: string;
-  projectName: string;
-  description: string;
+  avatar_url: string;
+  name: string;
+  description?: string;
   language: string;
-  stars: number;
+  stargazerCount: number;
   access: number;
-  days: string;
+  
+  updatedAt: any;
 }
 
 export default function RepositoriesCard({
-  projectName,
+  name,
   description,
-  stars,
-  days,
+  stargazerCount,
   language,
-  access,
-}: RepositoriesCard) {
+  access = 0,
+  avatar_url,
+  updatedAt,
+}: RepositoriesCardProps) {
   return (
     <Container>
       <TopCard>
         <UserInformation>
           <View style={{ flexDirection: "row" }}>
-            <Text>{projectName}</Text>
+            <Text>{name}</Text>
             <MaterialIcons name="keyboard-arrow-right" size={24} />
             <Star>
               <MaterialIcons name="star" size={20} color="gold" />
@@ -70,7 +73,7 @@ export default function RepositoriesCard({
           style={{ marginRight: 4 }}
           color="#7E7E7E"
         />
-        <Icon>{stars}</Icon>
+        <Icon>{stargazerCount}</Icon>
         <MaterialIcons
           name="supervisor-account"
           size={16}
@@ -84,7 +87,8 @@ export default function RepositoriesCard({
           style={{ marginRight: 4 }}
           color="#7E7E7E"
         />
-        <Icon>{days}</Icon>
+        
+        <Icon>{updatedAt}</Icon>
       </FooterCard>
     </Container>
   );

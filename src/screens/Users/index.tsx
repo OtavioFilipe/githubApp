@@ -7,7 +7,6 @@ import { GitUserCard, UsersCard } from "../../components/UsersCard";
 import { Container, Header, Image } from "./styles";
 
 import image from "../../assets/icons/github.png"
-import { Text } from "react-native";
 
 export default function Users({ route, navigation }: any) {
   

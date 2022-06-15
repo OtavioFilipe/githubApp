@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 import { Container, Header, Image } from "./styles";
@@ -10,44 +10,19 @@ import CustomFlatlist from "../../components/CustomFlatlist";
 import avatarImage from "../../assets/icons/userAvatar.png"
 
 export default function Repositories({ navigation } : any) {
-  const data: RepositoriesCard[] = [
-    {
-      id: "1",
-      projectName: "project-name-java",
-      description: "Project application with component app with React Native.",
-      language: "ReactNative",
-      stars: 2,
-      access: 5,
-      days: "2 dias atras",
-    },
-    {
-      id: "2",
-      projectName: "project-name-java",
-      description: "Project application with component app with React Native.",
-      language: "ReactNative",
-      stars: 2,
-      access: 5,
-      days: "2 dias atras",
-    },
-    {
-      id: "3",
-      projectName: "project-name-java",
-      description: "Project application with component app with React Native.",
-      language: "ReactNative",
-      stars: 2,
-      access: 5,
-      days: "2 dias atras",
-    },
-    {
-      id: "4",
-      projectName: "project-name-java",
-      description: "Project application with component app with React Native.",
-      language: "ReactNative",
-      stars: 2,
-      access: 5,
-      days: "2 dias atras",
-    }
-  ]
+  const [repos, setRepos] = useState([]);
+
+  function handleGetRepo() {
+    fetch('https://api.github.com/users/OtavioFilipe/repos')
+    .then((response) => response.json())
+    .then((json) => {
+      setRepos(json);
+    });
+}
+
+  useEffect(() => {
+    handleGetRepo();
+  }, []);
 
   return (
     <Container>
@@ -64,16 +39,16 @@ export default function Repositories({ navigation } : any) {
       <CustomFlatlist
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => item.id}
-        data={data}
+        data={repos}
         renderItem={({ item }) => (
           <RepositoriesCard
             id={item.id}
-            projectName={item.projectName}
+            name={item.name}
             description={item.description}
             language={item.language}
-            stars={item.stars}
+            stargazerCount={item.stargazerCount}
             access={item.access}
-            days={item.days}
+            updatedAt={item.updatedAt}
           />
         )}
       />
