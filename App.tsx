@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ThemeProvider } from "styled-components";
@@ -19,6 +19,7 @@ import Users from "./src/screens/Users";
 import AddUser from "./src/screens/AddUser";
 import Repositories from "./src/screens/Repositories";
 import { SentryError } from "./src/utils/SentryError";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Stack = createNativeStackNavigator();
 
@@ -41,14 +42,26 @@ function App() {
 
   useEffect(() => {
     SentryError();
+    handleGetUser();
   }, []);
+
+  const [users, setUsers] = useState([]);
+
+  async function handleGetUser() {
+    const data:any = await AsyncStorage.getItem('@user')
+    const parsedUsers = JSON.parse(data)
+
+    setUsers(prevdata => [...prevdata, parsedUsers])
+    console.log(users);
+    
+  }
 
 
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Login"
+          initialRouteName='Login'
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Login" component={Login} />

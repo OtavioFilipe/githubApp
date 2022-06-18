@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { 
     Container, 
     Text, 
@@ -22,12 +23,24 @@ export default function Login({ navigation }: any) {
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
+            storeData(json);
             navigation.navigate("User", {
                 data: JSON.stringify(json)
             })
             
         });
     }
+
+    const storeData = async (value) => {
+        try {
+          const jsonValue = JSON.stringify(value)
+          await AsyncStorage.setItem('@storage_Key', jsonValue)
+        } catch (e) {
+          console.log(e);
+          
+        }
+      }
+
     return (
         <Container>
             <Image source={image}/>

@@ -7,13 +7,15 @@ import SearchBox from "../../components/SearchBox";
 import RepositoriesCard from "../../components/RepositoriesCard";
 import CustomFlatlist from "../../components/CustomFlatlist";
 
-import avatarImage from "../../assets/icons/userAvatar.png"
+import avatarImage from "../../assets/icons/userAvatar.png";
 
-export default function Repositories({ navigation } : any) {
+export default function Repositories({ route, navigation } : any) {
   const [repos, setRepos] = useState([]);
 
+  const {login} = route.params;
+  
   function handleGetRepo() {
-    fetch('https://api.github.com/users/OtavioFilipe/repos')
+    fetch('https://api.github.com/users/' + login + '/repos')
     .then((response) => response.json())
     .then((json) => {
       setRepos(json);
